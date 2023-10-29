@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label class="statusSelected"> Sort by order: </label>
+
+  <app-dropdown
+    [options]="orderOptions"
+    [optionsSelected]="selectedOrder"
+    (onSelect)="orderByDate($event)"
+  />
+</div>

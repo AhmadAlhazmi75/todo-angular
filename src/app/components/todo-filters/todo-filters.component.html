@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label class="statusSelected"> Filter by priority </label>
+
+  <app-dropdown
+    [options]="filterOptions"
+    [optionsSelected]="selectedStatus"
+    (onSelect)="filterByStatus($event)"
+  />
+</div>

@@ -1,0 +1,23 @@
+<form class="todo-form" (ngSubmit)="addTodo()">
+  <h2>New Task</h2>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      id="description"
+      name="description"
+      autocomplete="off"
+      [(ngModel)]="newTodoDescription"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Priority</label>
+    <app-dropdown
+      [options]="statusOptions"
+      [optionsSelected]="newTodoStatus"
+      (onSelect)="changeStatus($event)"
+    />
+  </div>
+  <button type="submit">Add Task</button>
+</form>

@@ -1,0 +1,13 @@
+
+<div class="container">
+    <h1>Task App</h1>
+
+    <app-todo-form />
+
+    <div class="filters">
+        <h2>Filtres</h2>
+        <app-todo-orders/>
+        <app-todo-filters/>
+    </div>
+    <app-todo-list class="todo-list" [todoList]="todos"/>
+</div>
